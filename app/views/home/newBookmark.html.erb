@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "register", :media => "all" %>
+<div id="createBookmark" style="margin-top:100px">
+<h3 style = "color:green">CREATE BOOKMARK</h3>
+<%= form_for :bookmark ,:url => {:action=>"createBookmark", :controller=>"home"} do |f| %>
+<% if (@bookmark.errors.any?)%>
+  <div id="error_explanation">
+     <h2><%= pluralize(@bookmark.errors.count, "error") %> prohibited this bookmark from being saved:</h2>
+    <ul>
+    <% @bookmark.errors.full_messages.each do |ms| %>
+      <li><%= ms %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<table id ="bookmarkTable">
+  <tr><td>Title: </td><td><%= f.text_field :title, :required => true%><br /></td></tr>
+  <tr><td>URL : </td><td><%= f.text_field :url, :required => true %><br /></td></tr>
+  <tr><td>Description : </td><td><%= f.text_area(:description,cols: 20, rows:5,:required => true)%><br /></td></tr>
+  <tr><td><%= f.submit(:class => "btn btn-small btn-success",id:"submitButton") %></td></tr>
+</table>
+<% end %>
+<div>

@@ -1,0 +1,22 @@
+footer
+{
+	position:fixed;
+	width:100%;
+    bottom:0;
+}
+.alert
+{
+	margin-top:100px
+}
+#edit_user
+{
+	margin-top:100px;
+}
+#new_user
+{
+	margin-top:10px;
+}
+#tableinregister
+{
+margin-top:100px;
+}

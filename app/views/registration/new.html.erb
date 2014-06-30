@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag "register", :media => "all" %>
+<!-- <h2>Sign up</h2> -->
+<%= form_tag(user_registration_path,:method => 'post') %>
+<%= devise_error_messages! %>
+<table id="tableinregister">
+ 
+<tr>
+<td>Username : </td>
+<td><%=text_field_tag "user[username]" %></td>
+</tr>
+ 
+<tr>
+<td>Email : </td>
+<td><%=email_field_tag "user[email]" %></td>
+</tr>
+ 
+<tr>
+<td>Password : </td>
+<td><%=password_field_tag "user[password]" %></td>
+</tr>
+ 
+<tr>
+<td>Retype password : </td>
+<td><%=password_field_tag "user[password_confirmation]" %></td>
+</tr>
+<tr>
+<td><%= submit_tag nil, :class => "btn btn-success"%></td>
+</tr>
+</table>
+ 
+ 
+<%= render :partial => "devise/shared/links" %>

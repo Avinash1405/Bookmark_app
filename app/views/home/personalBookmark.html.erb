@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "register", :media => "all" %>
+<div style="margin-top:80px;position:relative">
+<% @bookmarks.each do|bookmark| %>
+<a href= /home/linkTo?id=<%= bookmark.id.to_s %>>	
+<div class="container1"> 
+	Title : <%= bookmark.title %>
+	<a href= /home/delete?id=<%= bookmark.id.to_s %> style="margin-left:100px">	
+	<i class="icon-trash" style="font-size: 2em;color:green"></i></a><br>
+	Description : <%= bookmark.description %><br>
+	Bookmark Created By : <%= bookmark.user.username %><br>
+	Bookmark Created At : <%= bookmark.created_at %><br>
+
+	<p id= para<%= bookmark.id %> >Votes : <%= bookmark.votes %></p><br>
+	
+	
+</div>
+
+</a>
+<% end %>
+</div>

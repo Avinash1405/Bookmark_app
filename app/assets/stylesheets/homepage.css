@@ -1,0 +1,79 @@
+#submitButton
+{
+	padding:4px ;
+	/*margin-left:70px;*/
+}
+.container1
+{
+	background-color: skyblue;
+	padding: 10px;
+	word-wrap: break-word;
+	box-shadow: 10px 10px 5px #888888;
+	/*overflow-x: scroll;
+    white-space: nowrap;*/
+	width:285px;
+	height:200px;
+	/*width:30%;
+	height:20%;*/
+	float:left;
+	margin-left: 10px;
+	margin-top:10px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+}
+
+.link_to
+{
+	color: green;
+}
+body
+{
+	margin-left: 12px;
+}
+/*table
+{
+	border-collapse: collapse;
+	font-family: "Trebuchet MS", verdana, Helvetica, sans-serif;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	vertical-align: middle;
+	
+}
+table, th, td {
+    border: 1px solid red;
+}
+p
+{
+	padding-left: 50px;
+}
+.divtest
+{
+	background-color: skyblue;
+}
+body
+{
+	display:inline;
+	float: left;
+}
+#create
+{
+	display: inline;
+	float: right;
+	padding: 10px;
+	margin-left: 700px;
+}
+#signout
+{
+	display: inline;
+	float:right;
+	padding: 10px;
+	margin-left: 20px;
+}
+#bookmarkTable
+{
+border-collapse: collapse;
+	width: 30%;
+	height: 30%;
+}
+*/

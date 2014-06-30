@@ -1,0 +1,51 @@
+<<!DOCTYPE html>
+<html>
+<head>
+  <title>BookmarkApp</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand">BookmarkApp</a>
+          <% if user_signed_in? %>
+          <i class="icon-user" style="font-size: 2em;color:violet;margin-left:800px">  <%= current_user.username %></i>
+            <% end %>
+          <div class="container nav-collapse" >
+            <ul class="nav">
+              <% if user_signed_in? %>
+              <li class="active"><%= button_to "Home",root_path,:method => :get,:class => "btn btn-primary",:id =>"home" %></li>
+    			     <li class="active"><%= button_to "Create Bookmark",home_newBookmark_path, :method => :get,:id=>"create",:class => "btn btn-primary"%></li>
+
+               <li class="active"><%= button_to "Personal Bookmarks",home_personalBookmark_path, :method => :get,:class => "btn btn-primary"%></li>
+
+              <li class="active"><%= button_to "Edit Profile",edit_user_registration_path,:method => :get,:class => "btn btn-primary"%></li>
+    			     <li class="active"><%= button_to "Sign Out", destroy_user_session_path, :method => :delete,:id =>"signout",:class => "btn btn-primary",:id => "signOut"%></li>
+    			<% else %>
+              <li class="active"><%= button_to "Home",root_path,:method => :get,:class => "btn btn-primary",:id =>"home1" %></li>
+				      <li class="active"><%= button_to "Sign In", new_user_session_path, :method => :get,:class => "btn btn-primary" %></li>
+				      <li class="active"><%= button_to "Sign Up", new_user_registration_path, :method => :get,:class => "btn  btn-primary",:id =>"signUp" %></li>
+				<% end %>
+    		</ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+<%= yield %>
+
+<footer>
+        <p>&copy; Company 2014</p>
+</footer>
+
+</body>
+</html>
